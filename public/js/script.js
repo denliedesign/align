@@ -9,3 +9,7 @@ function AddTextTag(c) {
 function AddTeamTag(c) {
     document.getElementById('teamTag').value += c;
 };
+
+function AddButtonTag(c) {
+    document.getElementById('buttonTag').value += c;
+};

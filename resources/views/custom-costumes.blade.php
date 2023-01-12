@@ -3,24 +3,43 @@
 
     <div class="container">
         <h2 class="quinn text-center my-4">Custom Costumes</h2>
+        <!-- LOGO PHOTO CONTROL -->
+        @can('update', \App\Photo::class)
+            <div id="custom-section-logo" style="border:2px solid red;" class="my-3 py-1 rounded shadow">
+                <span class="fw-bold mx-3">Custom Section 1 Logo</span>
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#photoModal"
+                        onClick="AddPhotoTag('custom-section-logo');">
+                    Add New
+                </button>
+                @include('/photos/form')
+            </div>
+        @endcan
+    <!-- TEXT CONTROLLER -->
+        @can('update', \App\Text::class)
+            <div id="custom-section-1-text" style="border:2px solid orange;" class="my-3 py-1 rounded shadow">
+                <span class="fw-bold mx-3">Custom Section 1 Text</span>
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#textModal"
+                        onClick="AddTextTag('custom-section-1-text');">
+                    Create New
+                </button>
+                @include('/texts/modal')
+            </div>
+        @endcan
         <div class="row mb-3">
             <div class="col-sm-5 d-flex align-items-center">
-                <img src="/images/logo-custom-costumes.png" alt="custom costumes logo" class="img-fluid">
+
+                @foreach($photos as $photo)
+                    @if($photo->tag == 'custom-section-logo')
+                        <div><img src="{{ asset('/storage/' . $photo->image) }}" alt="costume options" class="img-fluid"></div>
+                        @include('/photos/admin')
+                    @endif
+                @endforeach
+{{--                <img src="/images/logo-custom-costumes.png" alt="custom costumes logo" class="img-fluid">--}}
             </div>
             <div class="col-sm-7 d-flex align-items-center">
 
-                <!-- TEXT CONTROLLER -->
-                @can('update', \App\Text::class)
-                    <div id="custom-section-1-text" style="border:2px solid orange;" class="my-3 py-1 rounded shadow">
-                        <span class="fw-bold mx-3">Custom Section 1 Text</span>
-                        <!-- Button trigger modal -->
-                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#textModal"
-                                onClick="AddTextTag('custom-section-1-text');">
-                            Create New
-                        </button>
-                        @include('/texts/modal')
-                    </div>
-                @endcan
                 @foreach($texts as $text)
                     @if($text->textTag == 'custom-section-1-text')
                         <div class="px-2 txt-lg" style="border-left: 2px solid #6A4187">
@@ -66,14 +85,32 @@
 {{--            <div class="col py-4"><img src="/images/cc-3.jpg" alt="dancer in custom costume" class="img-fluid shadow rounded"></div>--}}
 {{--        </div>--}}
 
-        <div class="d-flex justify-content-center my-4">
-            <div class="btn btn-lg btn-violet text-white px-4 shadow rounded">
-                <a href="https://calendly.com/thedanceboutiquefwd/custom-costumes?month=2021-12" target="_blank" class="text-white" style="text-decoration: none;">
-                    <ion-icon name="calendar-outline"></ion-icon>
-                    Book Consultation
-                </a>
+    <!-- Button CONTROL -->
+        @can('update', \App\Button::class)
+            <div id="custom-section-1-button" style="border:2px solid red;" class="my-3 py-1 rounded shadow">
+                <span class="fw-bold mx-3">Custom Section 1 Button</span>
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#buttonModal"
+                        onClick="AddButtonTag('custom-section-1-button');">
+                    Add New
+                </button>
+                @include('/buttons/modal')
             </div>
+        @endcan
+        <div class="d-flex justify-content-center my-4">
+            @foreach($buttons as $button)
+                @if($button->buttonTag == 'custom-section-1-button')
+                    <div class="btn btn-lg btn-violet text-white px-4 shadow rounded">
+                        <a href="{{ $button->buttonLink }}" target="_blank" class="text-white" style="text-decoration: none;">
+                            <ion-icon name="calendar-outline"></ion-icon>
+                            {{ $button->buttonText }}
+                        </a>
+                    </div>
+                    @include('/buttons/admin')
+                @endif
+            @endforeach
         </div>
+        <!-- END Button CONTROL -->
 
 
         <!-- PHOTO CONTROL -->

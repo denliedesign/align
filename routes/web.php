@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ButtonController;
 use App\Http\Controllers\PhotoController;
 use App\Http\Controllers\TeamController;
 use App\Http\Controllers\TextController;
@@ -39,3 +40,4 @@ require __DIR__.'/auth.php';
 Route::resource('photos', PhotoController::class);
 Route::resource('texts', TextController::class);
 Route::resource('teams', TeamController::class);
+Route::resource('buttons', ButtonController::class);

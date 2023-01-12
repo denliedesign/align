@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use App\Models\Button;
 use App\Models\Photo;
 use App\Models\Team;
 use App\Models\Text;
@@ -30,5 +31,6 @@ class AppServiceProvider extends ServiceProvider
         View::share('photos', Photo::all());
         View::share('texts', Text::all());
         View::share('teams', Team::all());
+        View::share('buttons', Button::all());
     }
 }
