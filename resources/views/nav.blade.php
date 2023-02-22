@@ -18,9 +18,9 @@
                 <li class="nav-item mx-2">
                     <a class="nav-link" href="/store">our store</a>
                 </li>
-                <li class="nav-item mx-2">
-                    <a class="nav-link" href="/custom-costumes">custom costumes</a>
-                </li>
+{{--                <li class="nav-item mx-2">--}}
+{{--                    <a class="nav-link" href="/custom-costumes">custom costumes</a>--}}
+{{--                </li>--}}
                 <li class="nav-item mx-2">
                     <a class="nav-link" href="#footer">contact us</a>
                 </li>

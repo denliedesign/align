@@ -27,9 +27,9 @@ Route::get('/shop', function () {
 Route::get('/store', function () {
     return view('/store');
 });
-Route::get('/custom-costumes', function () {
-    return view('/custom-costumes');
-});
+//Route::get('/custom-costumes', function () {
+//    return view('/custom-costumes');
+//});
 
 Route::get('/dashboard', function () {
     return view('dashboard');
