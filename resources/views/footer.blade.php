@@ -88,7 +88,7 @@
             <div class="col">Want to join our rockstar team at Align Boutique?</div>
             <div class="col d-flex align-items-center justify-content-center">
                 <div class="btn btn-violet text-white px-4 shadow rounded">
-                    <a href="https://forms.gle/fFJtBKArgx8VqVqt9" target="_blank" class="text-white" style="text-decoration: none;">Apply Now</a>
+                    <a href="https://forms.gle/BdvzA8de33gAJfBG8" target="_blank" class="text-white" style="text-decoration: none;">Apply Now</a>
                 </div>
             </div>
         </div>
