@@ -88,7 +88,7 @@
             <div class="col">Want to join our rockstar team at Align Boutique?</div>
             <div class="col d-flex align-items-center justify-content-center">
                 <div class="btn btn-violet text-white px-4 shadow rounded">
-                    <a href="https://forms.gle/BdvzA8de33gAJfBG8" target="_blank" class="text-white" style="text-decoration: none;">Apply Now</a>
+                    <a href="https://forms.gle/tiEMuMHzuXDmGxYw7" target="_blank" class="text-white" style="text-decoration: none;">Apply Now</a>
                 </div>
             </div>
         </div>
@@ -105,9 +105,9 @@
             </div>
             <div class="col-sm my-1">
                 <strong>STORE HOURS</strong>
-                <br>Monday - Friday - 11:00am - 7:00pm
-                <br>Saturday - 10:00am - 4:00pm
-                <br>Sunday - Closed
+                <br>Monday - Friday | 12:00 - 6:00pm
+                <br>Saturday | 10:00 - 4:00pm
+                <br>Sunday | CLOSED
             </div>
             <div class="col-sm my-1">
                 <strong>CONTACT</strong>
